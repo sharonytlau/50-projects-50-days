@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 25px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  color: green;
+}
+
+.cards-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 5vw;
+  gap: 1vw;
+}
+
+.card {
+  background-size: auto 115%;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  cursor: pointer;
+  transition: all 500ms ease-out;
+  border-radius: 2rem;
+  position: relative;
+  color: white;
+}
+
+.card p {
+  word-break: break-word;
+  opacity: 0;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.card.active {
+  flex: 8;
+  background-size: auto 125%;
+}
+
+.card.active p {
+  opacity: 1;
+  transition: opacity 300ms ease-out 400ms;
+}
+
+@media screen and (max-width: 768px) {
+  div.cards-container div:nth-last-of-type(1) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div.cards-container div:nth-last-of-type(2) {
+    display: none;
+  }
+}
+
+footer {
+  font-weight: 400;
+  position: absolute;
+  bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer p {
+  margin: 0;
+  color: #3a3a3a;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.fa-github {
+  color: #3a3a3a;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+  color: #329f5b;
+}

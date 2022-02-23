@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 a {
+  color: darkgreen;
+}
