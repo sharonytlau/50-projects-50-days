@@ -75,7 +75,7 @@ h1 {
 footer {
   font-weight: 400;
   position: absolute;
-  bottom: 0.3rem;
+  bottom: 0.3vh;
   display: flex;
   align-items: center;
   gap: 8px;
