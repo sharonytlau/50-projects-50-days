@@ -1,9 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Ubuntu:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  font-size: 25px;
+  --font-family-serif: "Playfair Display", serif;
+  --font-family-sans-serif: "Ubuntu", sans-serif;
 }
 
 body {
-  font-size: 25px;
+  font-family: var(--font-family-sans-serif);
   display: flex;
   flex-direction: column;
   padding: 5rem;
@@ -11,6 +20,18 @@ body {
   height: 100vh;
 }
 
+h1 {
+  font-size: 3rem;
+  font-family: var(--font-family-serif);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
 h2 a {
+  font-size: 2rem;
   color: darkgreen;
+  text-decoration: none;
 }
