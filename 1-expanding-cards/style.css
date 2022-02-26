@@ -75,7 +75,7 @@ h1 {
 footer {
   font-weight: 400;
   position: absolute;
-  bottom: 0.3vh;
+  bottom: 10px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -98,6 +98,5 @@ footer a {
 }
 
 .fa-github:hover {
-  transform: rotate(360deg) scale(1.2);
-  color: #329f5b;
+  transform: rotate(360deg);
 }
