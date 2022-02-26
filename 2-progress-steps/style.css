@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-size: 28px;
+  --border-width: 6px;
+  --color-inactive: #dadada;
+  --color-active: #3498db;
+  --color-inactive-dim: #d4d4d4;
+  --color-inactive-dark: #a0a0a0;
+  --transition-interval: 400ms;
+}
+
+html {
+  height: 100vh;
+}
+
+body,
+main,
+.steps-container,
+.step,
+.btns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100%;
+  background-color: #f6f7fb;
+  color: var(--color-inactive-dark);
+  font-size: var(--font-size);
+  font-family: "Ubuntu", sans-serif;
+}
+
+main {
+  flex-direction: column;
+}
+
+.step-progress-container {
+  position: relative;
+}
+
+/* progress  */
+
+.progress-container,
+.progress {
+  position: absolute;
+  height: var(--border-width);
+}
+
+.progress-container {
+  top: 50%;
+  z-index: -1;
+  width: 100%;
+  background-color: var(--color-inactive);
+}
+
+.progress {
+  background-color: var(--color-active);
+  width: 0%;
+  transition: width ease-out var(--transition-interval);
+}
+
+/* step */
+
+.steps-container {
+  gap: 9rem;
+}
+
+.step {
+  display: inline-flex;
+  font-family: monospace;
+  padding: 10px;
+  background-color: white;
+  height: calc(2 * var(--font-size));
+  width: calc(2 * var(--font-size));
+  border: solid var(--border-width) var(--color-inactive);
+  border-radius: 50%;
+  transition: border-color ease-in var(--transition-interval);
+}
+
+.step.active {
+  border-color: var(--color-active);
+}
+
+/* buttons */
+
+.btns-container {
+  width: 100%;
+  gap: 2rem;
+  margin: 4rem 0 0;
+}
+
+.btns-container button {
+  cursor: pointer;
+  padding: 1rem 3.2rem;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--color-inactive-dim);
+  font-size: inherit;
+}
+
+.btns-container button.active {
+  background-color: var(--color-active);
+}
+
+.btns-container button:active {
+  transform: scale(0.98);
+}
+
+.btns-container button:disabled {
+  cursor: not-allowed;
+}
+
+/* footer */
+
+footer {
+  font-weight: 400;
+  font-size: 25px;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer p {
+  margin: 0;
+  color: #3a3a3a;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.fa-github {
+  color: #3a3a3a;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg);
+}
